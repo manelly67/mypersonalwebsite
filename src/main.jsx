@@ -1,5 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import "./styles/style-reset.css";
 import "./styles/index.css";
 import { googleFonts } from "./styles/google-fonts.js";
 import App from "./App.jsx";
