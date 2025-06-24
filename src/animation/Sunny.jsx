@@ -11,8 +11,8 @@ const Sunny = (props) => {
     screenWidth,
     screenHeight,
   } = props;
-  const { animateIn } = styles;
- 
+  const { animateIn, bright } = styles;
+  
 
   return (
     <>
@@ -32,8 +32,9 @@ const Sunny = (props) => {
                 backgroundImage: "url(/src/assets/img/sun/lo_sunny.jpg)",
               }}
               alt="flock of birds flying under a blue sky on a sunny day"
-            />
+            /> 
           </picture>
+          <div className={bright} style={{width:`${screenWidth*0.4}px`,height:`${screenHeight*0.75}px`}}></div>
           <div className="thanks_to">
             <p>
               This photo is from
