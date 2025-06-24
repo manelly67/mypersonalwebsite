@@ -54,7 +54,7 @@ const Raining = (props) => {
         </>
       ) : (
         <>
-          <button onClick={onShow}>Rain</button>
+          <button onClick={onShow}>RAIN</button>
         </>
       )}
     </>
