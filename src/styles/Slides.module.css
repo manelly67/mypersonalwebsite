@@ -1,0 +1,27 @@
+.animateIn {
+    animation: slide-in 1.7s both;
+}
+
+.animateOut {
+    animation: slide-out 1.3s both;
+}
+
+@keyframes slide-in {
+    0% {
+        opacity: 0.1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}

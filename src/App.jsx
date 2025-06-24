@@ -8,6 +8,7 @@ import sun_small from "./assets/img/sun/sunny_day_small.jpg";
 import "./styles/App.css";
 import Raining from "./animation/Raining";
 import Sunny from "./animation/Sunny";
+import styles from "./styles/Slides.module.css";
 
 function App() {
   const body = document.querySelector("body");
@@ -15,11 +16,21 @@ function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [screenWidth, setScreenWidth] = useState(0);
   const [screenHeight, setScreenHeight] = useState(0);
+  const { animateOut } = styles;
 
   useEffect(() => {
     setScreenWidth(window.innerWidth);
     setScreenHeight(window.innerHeight);
   }, [screenWidth, screenHeight]);
+
+ 
+function fading(){
+  const picture = document.querySelector("picture");
+  if(picture){
+    picture.className = animateOut;
+  }
+}
+
 
   return (
     <>
@@ -39,6 +50,7 @@ function App() {
             rain_small={rain_small}
             isActive={activeIndex === 1}
             onShow={() => setActiveIndex(1)}
+            fading={fading}
           />
           <Sunny
             screenWidth={screenWidth}
@@ -48,6 +60,7 @@ function App() {
             sun_small={sun_small}
             isActive={activeIndex === 2}
             onShow={() => setActiveIndex(2)}
+            fading={fading}
           />
         </aside>
       </main>

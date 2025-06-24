@@ -12,10 +12,14 @@ main>aside>picture {
   z-index: -1;
 }
 
-.thanks_to{
+.thanks_to {
   background-color: #454545;
+  position: fixed;
+  bottom: 2%;
+  left: 5%;
 }
-.thanks_to > p {
+
+.thanks_to>p {
   box-shadow: rgb(0, 0, 0) 2px 2px 5px 2px;
   padding: 1px 2px 2px 1px;
   color: #d1d1d1;
@@ -36,11 +40,6 @@ main>aside>picture {
     flex-direction: row;
   }
 
-  .thanks_to{
-    position: fixed;
-    bottom: 2%;
-    left: 5%;
-  }
 }
 
 @media screen and (min-width: 401px) {
@@ -59,9 +58,4 @@ main>aside>picture {
     flex-direction: column;
   }
 
-  .thanks_to{
-    position: fixed;
-    bottom: 2%;
-    left: 5%;
-  }
 }

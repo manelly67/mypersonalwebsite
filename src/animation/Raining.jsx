@@ -1,7 +1,10 @@
+import styles from "../styles/Slides.module.css";
+
 const Raining = (props) => {
   const {
     isActive,
     onShow,
+    fading,
     rain_large,
     rain_medium,
     rain_small,
@@ -9,11 +12,13 @@ const Raining = (props) => {
     screenHeight,
   } = props;
 
+  const { animateIn } = styles;
+
   return (
     <>
       {isActive ? (
         <>
-          <picture>
+          <picture id="rain_img"  className={animateIn} >
             <source media="(min-width: 981px)" srcSet={rain_large} />
             <source
               media="(min-width:391px) and (max-width:980px)"
@@ -54,7 +59,12 @@ const Raining = (props) => {
         </>
       ) : (
         <>
-          <button onClick={onShow}>RAIN</button>
+          <button 
+          onClick={()=>{
+            fading();
+            setTimeout(onShow,1200);
+          }} 
+          >RAIN</button>
         </>
       )}
     </>
