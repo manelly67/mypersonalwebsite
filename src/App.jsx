@@ -6,13 +6,21 @@ import sun_large from "./assets/img/sun/sunny_day_large.jpg";
 import sun_medium from "./assets/img/sun/sunny_day_medium.jpg";
 import sun_small from "./assets/img/sun/sunny_day_small.jpg";
 import "./styles/App.css";
+import ToggleTheme from "./components/ToggleTheme";
 import Raining from "./animation/Raining";
 import Sunny from "./animation/Sunny";
 import styles from "./styles/Slides.module.css";
+import { myName } from "./assets/text-content";
 
 function App() {
   const body = document.querySelector("body");
+  if (body) {
+    document.body.className = "light";
+  }
   const titleDiv = document.querySelector("title");
+  if (titleDiv) {
+    titleDiv.textContent = `${myName}'s Portfolio`;
+  }
   const [activeIndex, setActiveIndex] = useState(0);
   const [screenWidth, setScreenWidth] = useState(0);
   const [screenHeight, setScreenHeight] = useState(0);
@@ -23,14 +31,12 @@ function App() {
     setScreenHeight(window.innerHeight);
   }, [screenWidth, screenHeight]);
 
- 
-function fading(){
-  const picture = document.querySelector("picture");
-  if(picture){
-    picture.className = animateOut;
+  function fading() {
+    const picture = document.querySelector("picture");
+    if (picture) {
+      picture.className = animateOut;
+    }
   }
-}
-
 
   return (
     <>
@@ -42,6 +48,7 @@ function fading(){
         </section>
 
         <aside>
+          <ToggleTheme theme="light" />
           <Raining
             screenWidth={screenWidth}
             screenHeight={screenHeight}

@@ -1,4 +1,5 @@
-import styles from "../styles/Slides.module.css";
+import styles1 from "../styles/Slides.module.css";
+import styles2 from "../styles/Buttons.module.css";
 
 const Sunny = (props) => {
   const {
@@ -11,8 +12,9 @@ const Sunny = (props) => {
     screenWidth,
     screenHeight,
   } = props;
-  const { animateIn, bright } = styles;
-  
+  const { animateIn, bright } = styles1;
+  const { buttonA } = styles2;
+  const imgWidth = screenWidth <= 391 ? screenWidth : (screenWidth > 980 ? screenWidth*0.5 : screenWidth*0.7);
 
   return (
     <>
@@ -26,7 +28,7 @@ const Sunny = (props) => {
             />
             <img
               src={sun_small}
-              width={screenWidth}
+              width={imgWidth}
               height={screenHeight}
               style={{
                 backgroundImage: "url(/src/assets/img/sun/lo_sunny.jpg)",
@@ -34,7 +36,7 @@ const Sunny = (props) => {
               alt="flock of birds flying under a blue sky on a sunny day"
             /> 
           </picture>
-          <div className={bright} style={{width:`${screenWidth*0.4}px`,height:`${screenHeight*0.75}px`}}></div>
+          <div className={bright} style={{width:`${imgWidth*0.4}px`,height:`${screenHeight*0.75}px`}}></div>
           <div className="thanks_to">
             <p>
               This photo is from
@@ -61,6 +63,7 @@ const Sunny = (props) => {
       ) : (
         <>
            <button 
+           className={buttonA}
            onClick={()=>{
             fading();
             setTimeout(onShow,1200);

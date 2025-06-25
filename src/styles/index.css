@@ -1,10 +1,32 @@
-
 .savate-medium, h1, h2 {
   font-family: "Savate", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
+
+/* define light dark colors*/
+
+.light {
+  --color-bg-first: #f6f6f6;
+  --color-base-text: #3d3d3d;
+  --color-a-hover: lightgreen; 
+  --color-text-button: #b0b0b0;
+  --color-bg-button: #4f4f4f;
+  --color-border-button: lightgreen;
+
+}
+
+.dark {
+  --color-bg-first: #3d3d3d;
+  --color-base-text: #f5f8fa;
+  --color-a-hover: lightgreen;
+  --color-text-button:#d1d1d1;
+  --color-bg-button: #6d6d6d;
+  --color-border-button: lightgreen;
+ 
+}
+
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -13,11 +35,8 @@
   font-weight: 400;
   font-style: normal;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
   background-attachment: fixed;
-
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -26,11 +45,11 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: var(--color-a-hover);
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: var(--color-a-hover);
 }
 
 body {
@@ -39,6 +58,9 @@ body {
   place-items:inherit;
   min-width: 320px;
   min-height: 100vh;
+
+  background-color: var(--color-bg-first);
+  color:var(--color-base-text);
 }
 
 h1 {
@@ -68,27 +90,15 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--color-bg-button);
+  color: var(--color-text-button);
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #454545;
+  border-color: var(--color-border-button);
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #3d3d3d;
-    background-color: #f6f6f6;
-  }
-  a:hover {
-    color: lightgreen;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }

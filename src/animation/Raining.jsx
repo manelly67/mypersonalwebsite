@@ -1,4 +1,5 @@
-import styles from "../styles/Slides.module.css";
+import styles1 from "../styles/Slides.module.css";
+import styles2 from "../styles/Buttons.module.css";
 
 const Raining = (props) => {
   const {
@@ -12,7 +13,10 @@ const Raining = (props) => {
     screenHeight,
   } = props;
 
-  const { animateIn } = styles;
+  const { animateIn } = styles1;
+  const { buttonA } = styles2;
+  const imgWidth = screenWidth <= 391 ? screenWidth : (screenWidth > 980 ? screenWidth*0.5 : screenWidth*0.7);
+
 
   return (
     <>
@@ -26,7 +30,7 @@ const Raining = (props) => {
             />
             <img
               src={rain_small}
-              width={screenWidth}
+              width={imgWidth}
               height={screenHeight}
               style={{
                 backgroundImage: "url(/src/assets/img/rain/lo_raining.jpg)",
@@ -60,6 +64,7 @@ const Raining = (props) => {
       ) : (
         <>
           <button 
+          className={buttonA}
           onClick={()=>{
             fading();
             setTimeout(onShow,1200);
