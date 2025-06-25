@@ -9,8 +9,9 @@ import "./styles/App.css";
 import ToggleTheme from "./components/ToggleTheme";
 import Raining from "./animation/Raining";
 import Sunny from "./animation/Sunny";
-import styles from "./styles/Slides.module.css";
-import { myName } from "./assets/text-content";
+import styles1 from "./styles/Slides.module.css";
+import styles2 from "./styles/Buttons.module.css";
+import { myName, textContentAboutMe } from "./assets/text-content";
 
 function App() {
   const body = document.querySelector("body");
@@ -24,7 +25,9 @@ function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [screenWidth, setScreenWidth] = useState(0);
   const [screenHeight, setScreenHeight] = useState(0);
-  const { animateOut } = styles;
+
+  const { animateOut } = styles1;
+  const { buttonA } = styles2;
 
   useEffect(() => {
     setScreenWidth(window.innerWidth);
@@ -42,9 +45,16 @@ function App() {
     <>
       <main>
         <section>
-          <h1>My personal website</h1>
-          <h3>my personal website</h3>
-          <p>my personal website</p>
+          <header>
+            <h1>{myName}</h1>
+          </header>
+          <section className="aboutMe">
+            <h2>My portfolio</h2>
+            <div>
+              <h3>About Me</h3>
+              <p>{textContentAboutMe}</p>
+            </div>
+          </section>
         </section>
 
         <aside>
@@ -69,6 +79,13 @@ function App() {
             onShow={() => setActiveIndex(2)}
             fading={fading}
           />
+          <button className={buttonA} 
+          onClick={()=>{
+            fading();
+            setActiveIndex(0);
+          }}>
+            clear
+          </button>
         </aside>
       </main>
     </>

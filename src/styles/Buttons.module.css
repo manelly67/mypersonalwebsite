@@ -3,6 +3,7 @@
     padding: 0.3em 0.9em;
     transition: transform 250ms ease-in-out;
     width: 55px;
+    box-shadow: #e7e7e7 2px 2px 5px 2px;
 }
 
 .buttonA:hover {

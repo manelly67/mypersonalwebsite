@@ -15,14 +15,18 @@ const Raining = (props) => {
 
   const { animateIn } = styles1;
   const { buttonA } = styles2;
-  const imgWidth = screenWidth <= 391 ? screenWidth : (screenWidth > 980 ? screenWidth*0.5 : screenWidth*0.7);
-
+  const imgWidth =
+    screenWidth <= 391
+      ? screenWidth
+      : screenWidth > 980
+      ? screenWidth * 0.5
+      : screenWidth * 0.85;
 
   return (
     <>
       {isActive ? (
         <>
-          <picture id="rain_img"  className={animateIn} >
+          <picture id="rain_img" className={animateIn}>
             <source media="(min-width: 981px)" srcSet={rain_large} />
             <source
               media="(min-width:391px) and (max-width:980px)"
@@ -63,13 +67,15 @@ const Raining = (props) => {
         </>
       ) : (
         <>
-          <button 
-          className={buttonA}
-          onClick={()=>{
-            fading();
-            setTimeout(onShow,1200);
-          }} 
-          >RAIN</button>
+          <button
+            className={buttonA}
+            onClick={() => {
+              fading();
+              setTimeout(onShow, 599);
+            }}
+          >
+            RAIN
+          </button>
         </>
       )}
     </>

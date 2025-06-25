@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+main>section {
+  position: relative;
+}
+
 main>aside>picture {
   position: fixed;
   top: 0%;
@@ -49,15 +53,48 @@ main>aside>picture {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 85% 15%;
-
   }
-
   aside {
     grid-row: 1/2;
     grid-column: 2/3;
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 10px;
   }
 
+}
+
+
+@media screen and (max-width: 980px) {
+  .aboutMe {
+    position: absolute;
+    right: 2%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+    padding-top: 40px;
+  }
+  .aboutMe>div{
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 981px) {
+  .aboutMe {
+    position: absolute;
+    right: -7%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+    padding-top: 40px;
+  }
+  .aboutMe>div{
+    width: 80%;
+    margin: 0 auto;
+  }
 }

@@ -1,6 +1,5 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./styles/style-reset.css";
 import "./styles/index.css";
 import { googleFonts } from "./styles/google-fonts.js";
 import App from "./App.jsx";
@@ -10,7 +9,7 @@ const meta = document.createElement("meta");
 meta.setAttribute("name", "description");
 meta.setAttribute(
   "content",
-  "Full Stack JavaScript React NodeJS - Maria Nelly Lopez Portfolio"
+  "Web Developer JavaScript, NodeJS, React - Maria Nelly Lopez Portfolio"
 );
 document.head.appendChild(meta);
 

@@ -14,7 +14,12 @@ const Sunny = (props) => {
   } = props;
   const { animateIn, bright } = styles1;
   const { buttonA } = styles2;
-  const imgWidth = screenWidth <= 391 ? screenWidth : (screenWidth > 980 ? screenWidth*0.5 : screenWidth*0.7);
+  const imgWidth =
+    screenWidth <= 391
+      ? screenWidth
+      : screenWidth > 980
+      ? screenWidth * 0.5
+      : screenWidth * 0.85;
 
   return (
     <>
@@ -34,9 +39,15 @@ const Sunny = (props) => {
                 backgroundImage: "url(/src/assets/img/sun/lo_sunny.jpg)",
               }}
               alt="flock of birds flying under a blue sky on a sunny day"
-            /> 
+            />
           </picture>
-          <div className={bright} style={{width:`${imgWidth*0.4}px`,height:`${screenHeight*0.75}px`}}></div>
+          <div
+            className={bright}
+            style={{
+              width: `${imgWidth * 0.4}px`,
+              height: `${screenHeight * 0.75}px`,
+            }}
+          ></div>
           <div className="thanks_to">
             <p>
               This photo is from
@@ -62,13 +73,15 @@ const Sunny = (props) => {
         </>
       ) : (
         <>
-           <button 
-           className={buttonA}
-           onClick={()=>{
-            fading();
-            setTimeout(onShow,1200);
-           }} 
-           >SUN</button>
+          <button
+            className={buttonA}
+            onClick={() => {
+              fading();
+              setTimeout(onShow, 599);
+            }}
+          >
+            SUN
+          </button>
         </>
       )}
     </>
