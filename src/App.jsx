@@ -5,6 +5,8 @@ import rain_small from "./assets/img/rain/small_raining.jpg";
 import sun_large from "./assets/img/sun/sunny_day_large.jpg";
 import sun_medium from "./assets/img/sun/sunny_day_medium.jpg";
 import sun_small from "./assets/img/sun/sunny_day_small.jpg";
+import Icon from '@mdi/react';
+import { mdiCircleDouble } from '@mdi/js';
 import "./styles/App.css";
 import ToggleTheme from "./components/ToggleTheme";
 import Raining from "./animation/Raining";
@@ -25,9 +27,10 @@ function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [screenWidth, setScreenWidth] = useState(0);
   const [screenHeight, setScreenHeight] = useState(0);
+  const pictureIn = activeIndex === 0 ? false : true;
 
   const { animateOut } = styles1;
-  const { buttonA } = styles2;
+  const { buttonD } = styles2;
 
   useEffect(() => {
     setScreenWidth(window.innerWidth);
@@ -46,9 +49,11 @@ function App() {
       <main>
         <section>
           <header>
-            <h1>{myName}</h1>
+           <div className={!pictureIn ? "headerDiv" : "headerPict"}>
+           <h1>{myName}</h1>
+           </div>
           </header>
-          <section className="aboutMe">
+          <section className={!pictureIn ? "aboutMe" : "aboutMeHalf"}>
             <h2>My portfolio</h2>
             <div>
               <h3>About Me</h3>
@@ -79,12 +84,15 @@ function App() {
             onShow={() => setActiveIndex(2)}
             fading={fading}
           />
-          <button className={buttonA} 
-          onClick={()=>{
-            fading();
-            setActiveIndex(0);
-          }}>
-            clear
+          <button
+            className={buttonD}
+            onClick={() => {
+              fading();
+              setActiveIndex(0);
+            }}
+            title="clear"
+          >
+            <Icon path={mdiCircleDouble} size={1} />
           </button>
         </aside>
       </main>

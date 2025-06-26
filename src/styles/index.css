@@ -11,6 +11,7 @@
 
 .light {
   --color-bg-first: #f6f6f6;
+  --color-bg-second: #e7e7e7;
   --color-base-text: #3d3d3d;
   --color-a-hover: lightgreen; 
   --color-text-button: #d1d1d1;
@@ -21,6 +22,7 @@
 
 .dark {
   --color-bg-first: #3d3d3d;
+  --color-bg-second:#242424;
   --color-base-text: #f5f8fa;
   --color-a-hover: lightgreen;
   --color-text-button:#e7e7e7;
@@ -129,30 +131,26 @@ h2 {
 
 h3 {
   font-size: 1.9em;
-  line-height: 1;
+  line-height: 1.1;
 }
+
+@media screen and (max-width: 980px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  h2 {
+    font-size: 1.9em;
+  }
+  
+  h3 {
+    font-size: 1.4em;
+  }
+  
+}
+
 
 p {
   font-size: 1em;
-  line-height: 1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.5em 0.9em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: var(--color-bg-button);
-  color: var(--color-text-button);
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: var(--color-border-button);
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  line-height: 1.1;
 }

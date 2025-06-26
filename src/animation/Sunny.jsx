@@ -1,3 +1,5 @@
+import Icon from '@mdi/react';
+import { mdiWeatherSunny } from '@mdi/js';
 import styles1 from "../styles/Slides.module.css";
 import styles2 from "../styles/Buttons.module.css";
 
@@ -13,7 +15,7 @@ const Sunny = (props) => {
     screenHeight,
   } = props;
   const { animateIn, bright } = styles1;
-  const { buttonA } = styles2;
+  const { buttonC } = styles2;
   const imgWidth =
     screenWidth <= 391
       ? screenWidth
@@ -74,13 +76,14 @@ const Sunny = (props) => {
       ) : (
         <>
           <button
-            className={buttonA}
+            className={buttonC}
             onClick={() => {
               fading();
               setTimeout(onShow, 599);
             }}
+            aria-label="Weather Sunny"
           >
-            SUN
+            <Icon path={mdiWeatherSunny} size={1.2} />
           </button>
         </>
       )}
