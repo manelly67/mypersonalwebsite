@@ -5,8 +5,10 @@ import rain_small from "./assets/img/rain/small_raining.jpg";
 import sun_large from "./assets/img/sun/sunny_day_large.jpg";
 import sun_medium from "./assets/img/sun/sunny_day_medium.jpg";
 import sun_small from "./assets/img/sun/sunny_day_small.jpg";
-import Icon from '@mdi/react';
-import { mdiCircleDouble } from '@mdi/js';
+import Icon from "@mdi/react";
+import { mdiCircleDouble } from "@mdi/js";
+import { mdiUmbrella } from "@mdi/js";
+import { mdiSunglasses } from "@mdi/js";
 import "./styles/App.css";
 import ToggleTheme from "./components/ToggleTheme";
 import Raining from "./animation/Raining";
@@ -29,7 +31,7 @@ function App() {
   const [screenHeight, setScreenHeight] = useState(0);
   const pictureIn = activeIndex === 0 ? false : true;
 
-  const { animateOut } = styles1;
+  const { animateIn, animateOut, rotate, shining } = styles1;
   const { buttonD } = styles2;
 
   useEffect(() => {
@@ -44,17 +46,48 @@ function App() {
     }
   }
 
+  function clear() {
+    setActiveIndex(0);
+    clearAnyInterval();
+  };
+
+  function clearAnyInterval(){
+    if(setInterval(sunglassesAnimation)){
+      clearInterval(sunglassesAnimation);
+    }
+  }
+
+  function sunglassesAnimation() {
+    const div = document.getElementById("sunglasses");
+    if(div){
+      div.className='';
+      div.className = `${shining}`;
+    }
+  }
+
+  /*AGREGAR TODO EL RESTO DEL TEXTO PARA PROBAR COMO PUEDE QUEDAR*/
+
   return (
     <>
       <main>
-        <section>
+        <section className={animateIn}>
           <header>
-           <div className={!pictureIn ? "headerDiv" : "headerPict"}>
-           <h1>{myName}</h1>
-           </div>
+            <div className={!pictureIn ? "headerDiv" : "headerPict"}>
+              <h1>{myName}</h1>
+            </div>
           </header>
           <section className={!pictureIn ? "aboutMe" : "aboutMeHalf"}>
-            <h2>My portfolio</h2>
+            <div>
+              {activeIndex === 1 ? (
+                <Icon path={mdiUmbrella} size={2} />
+              ) : activeIndex === 2 ? (
+                <div id="sunglasses">
+                  <Icon path={mdiSunglasses} size={2} className={rotate} />
+                </div>
+              ) : null}
+              <h2>My portfolio</h2>
+            </div>
+
             <div>
               <h3>About Me</h3>
               <p>{textContentAboutMe}</p>
@@ -83,12 +116,13 @@ function App() {
             isActive={activeIndex === 2}
             onShow={() => setActiveIndex(2)}
             fading={fading}
+            sunglassesAnimation={sunglassesAnimation}
           />
           <button
             className={buttonD}
             onClick={() => {
               fading();
-              setActiveIndex(0);
+              setTimeout(clear, 600);
             }}
             title="clear"
           >

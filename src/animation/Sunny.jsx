@@ -13,6 +13,7 @@ const Sunny = (props) => {
     sun_small,
     screenWidth,
     screenHeight,
+    sunglassesAnimation,
   } = props;
   const { animateIn, bright } = styles1;
   const { buttonC } = styles2;
@@ -22,6 +23,8 @@ const Sunny = (props) => {
       : screenWidth > 980
       ? screenWidth * 0.5
       : screenWidth * 0.85;
+
+  
 
   return (
     <>
@@ -80,6 +83,7 @@ const Sunny = (props) => {
             onClick={() => {
               fading();
               setTimeout(onShow, 599);
+              setInterval(sunglassesAnimation, 8000);
             }}
             aria-label="Weather Sunny"
           >

@@ -141,3 +141,7 @@ header > div> h1 {
   }
   
 }
+
+#sunglasses{
+  color: var(--color-sunglasses);
+}

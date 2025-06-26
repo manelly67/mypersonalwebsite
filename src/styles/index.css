@@ -17,7 +17,7 @@
   --color-text-button: #d1d1d1;
   --color-bg-button: #4f4f4f;
   --color-border-button: lightgreen;
-
+  --color-sunglasses: #242424;
 }
 
 .dark {
@@ -28,8 +28,8 @@
   --color-text-button:#e7e7e7;
   --color-bg-button: #6d6d6d;
   --color-border-button: lightgreen;
- 
-}
+  --color-sunglasses: #C7C7C7;
+ }
 
 
  /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -118,6 +118,7 @@ body {
   background-color: var(--color-bg-first);
   color:var(--color-base-text);
 }
+
 
 h1 {
   font-size: 3.2em;
