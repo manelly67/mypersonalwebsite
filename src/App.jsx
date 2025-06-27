@@ -68,9 +68,16 @@ function App() {
 
             <div>
               <h3>About Me</h3>
-              <p>{textContentAboutMe}</p>
+              {!textContentAboutMe ? null : textContentAboutMe}
             </div>
           </section>
+          {!showDetails ? (
+          <Projects
+            setSelectedProj={setSelectedProj}
+            setShowDetails={setShowDetails}
+            pictureIn={pictureIn}
+          />
+        ) : null}
         </section>
 
         <aside>
@@ -101,12 +108,7 @@ function App() {
           </button>
         </aside>
 
-        {!showDetails ? (
-          <Projects
-            setSelectedProj={setSelectedProj}
-            setShowDetails={setShowDetails}
-          />
-        ) : null}
+       
       </main>
     </>
   );

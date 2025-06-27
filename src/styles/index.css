@@ -18,6 +18,7 @@
   --color-bg-button: #4f4f4f;
   --color-border-button: lightgreen;
   --color-sunglasses: #242424;
+  --color-article-shadow:#b0b0b0;
 }
 
 .dark {
@@ -29,6 +30,7 @@
   --color-bg-button: #6d6d6d;
   --color-border-button: lightgreen;
   --color-sunglasses: #C7C7C7;
+  --color-article-shadow:#6d6d6d;
  }
 
 

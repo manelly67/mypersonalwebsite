@@ -1,4 +1,4 @@
-.buttonA, .buttonB, .buttonC, .buttonD {
+.buttonA, .buttonB, .buttonC, .buttonD, .buttonE {
     border-radius: 8px;
     border: 1px solid transparent;
     z-index: 1;
@@ -6,7 +6,7 @@
     transition: transform 250ms ease-in-out, border-color 0.25s;
     width: 55px;
     height: 55px;
-    box-shadow: #e7e7e7 2px 2px 5px 2px;
+    box-shadow: #e7e7e7 2px 2px 3px 2px;
     background-color: var(--color-bg-button);
     color: var(--color-text-button);
     cursor: pointer;
@@ -45,5 +45,14 @@
     color: var(--color-border-button);
 }
 .buttonD:hover{
+    border-color: var(--color-border-button);
+}
+
+
+.buttonE{
+    text-align: center;
+    padding: 0%;
+}
+.buttonE:hover{
     border-color: var(--color-border-button);
 }

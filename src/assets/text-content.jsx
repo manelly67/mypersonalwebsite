@@ -7,8 +7,22 @@ import screenshot6 from "./img/screenshot-project6.png";
 import { Project } from "./class-project";
 
 const myName = "Maria Nelly Lopez";
-const textContentAboutMe =
-  "Hi! I completed a full-stack development bootcamp and successfully built several projects using Javascript, React, Sql, Prisma and Nodejs, which demonstrates my commitment to transitioning into a web development role. In my background I come with a solid formation and experience in the accounting area. I bring strong organizational and problem-solving skills, allowing me to effectively manage project timelines and resolve technical issues. I am eager to leverage my analytical and accurate mindset from my accounting background to excel in web development and continuous learning.";
+
+const textContentAboutMe = (
+    <p><span>Hi!.</span>
+      I completed a full-stack development bootcamp and successfully built
+      several projects using Javascript, React, Sql, Prisma and Nodejs, which
+      demonstrates my commitment to transitioning into a web development role.
+      <br></br>
+      In my background I come with a solid formation and experience in the
+      accounting area.
+      <br></br>I bring strong organizational and problem-solving skills,
+      allowing me to effectively manage project timelines and resolve technical
+      issues.
+      <br></br>I am eager to leverage my analytical and accurate mindset from my
+      accounting background to excel in web development and continuous learning.
+    </p>
+);
 
 const textContentContactMe =
   "If you think my work fits what you need, write to me.";
