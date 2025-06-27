@@ -89,7 +89,7 @@ header > div> h1 {
   main {
     width: 100vw;
     display: grid;
-    grid-template-rows: 1fr;
+    grid-template-rows: 2fr 6fr;
     grid-template-columns: 85% 15%;
   }
   aside {

@@ -13,6 +13,7 @@ import "./styles/App.css";
 import ToggleTheme from "./components/ToggleTheme";
 import Raining from "./animation/Raining";
 import Sunny from "./animation/Sunny";
+import Projects from "./components/Projects";
 import styles1 from "./styles/Slides.module.css";
 import styles2 from "./styles/Buttons.module.css";
 import { myName, textContentAboutMe } from "./assets/text-content";
@@ -29,6 +30,8 @@ function App() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [screenWidth, setScreenWidth] = useState(0);
   const [screenHeight, setScreenHeight] = useState(0);
+  const [showDetails, setShowDetails] = useState(false);
+  const [selectedProj, setSelectedProj] = useState(null);
   const pictureIn = activeIndex === 0 ? false : true;
 
   const { animateIn, animateOut, rotate, shining } = styles1;
@@ -49,23 +52,21 @@ function App() {
   function clear() {
     setActiveIndex(0);
     clearAnyInterval();
-  };
+  }
 
-  function clearAnyInterval(){
-    if(setInterval(sunglassesAnimation)){
+  function clearAnyInterval() {
+    if (setInterval(sunglassesAnimation)) {
       clearInterval(sunglassesAnimation);
     }
   }
 
   function sunglassesAnimation() {
     const div = document.getElementById("sunglasses");
-    if(div){
-      div.className='';
+    if (div) {
+      div.className = "";
       div.className = `${shining}`;
     }
   }
-
-  /*AGREGAR TODO EL RESTO DEL TEXTO PARA PROBAR COMO PUEDE QUEDAR*/
 
   return (
     <>
@@ -129,6 +130,16 @@ function App() {
             <Icon path={mdiCircleDouble} size={1} />
           </button>
         </aside>
+
+        {!showDetails ? (
+          <Projects
+            setSelectedProj={setSelectedProj}
+            setShowDetails={setShowDetails}
+          />
+        ) : null}
+
+
+        
       </main>
     </>
   );
