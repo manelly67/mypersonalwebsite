@@ -1,18 +1,19 @@
+import rain_large from "../assets/img/rain/large_raining.jpg";
+import rain_medium from "../assets/img/rain/medium_raining.jpg";
+import rain_small from "../assets/img/rain/small_raining.jpg";
 import Icon from '@mdi/react';
 import { mdiWeatherRainy } from '@mdi/js';
-import styles1 from "../styles/Slides.module.css";
+import styles1 from "./Slides.module.css";
 import styles2 from "../styles/Buttons.module.css";
+
 
 const Raining = (props) => {
   const {
     isActive,
     onShow,
-    fading,
-    rain_large,
-    rain_medium,
-    rain_small,
     screenWidth,
     screenHeight,
+    fading,
   } = props;
 
   const { animateIn } = styles1;

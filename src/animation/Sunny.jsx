@@ -1,19 +1,19 @@
+import sun_large from "../assets/img/sun/sunny_day_large.jpg";
+import sun_medium from "../assets/img/sun/sunny_day_medium.jpg";
+import sun_small from "../assets/img/sun/sunny_day_small.jpg";
 import Icon from '@mdi/react';
 import { mdiWeatherSunny } from '@mdi/js';
-import styles1 from "../styles/Slides.module.css";
+import styles1 from "./Slides.module.css";
 import styles2 from "../styles/Buttons.module.css";
+import { sunglassesAnimation } from './auxFunct';
 
 const Sunny = (props) => {
   const {
     isActive,
     onShow,
-    fading,
-    sun_large,
-    sun_medium,
-    sun_small,
     screenWidth,
     screenHeight,
-    sunglassesAnimation,
+    fading,
   } = props;
   const { animateIn, bright } = styles1;
   const { buttonC } = styles2;
@@ -83,7 +83,7 @@ const Sunny = (props) => {
             onClick={() => {
               fading();
               setTimeout(onShow, 599);
-              setInterval(sunglassesAnimation, 8000);
+              setTimeout(sunglassesAnimation, 4000);
             }}
             aria-label="Weather Sunny"
           >

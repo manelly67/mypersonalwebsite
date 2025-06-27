@@ -67,8 +67,13 @@
 }
 
 .shining {
-    animation: shining 4s both; 
+    animation-name: shining;
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
 }
+
 
 @keyframes rotate {
     0% {
@@ -91,7 +96,23 @@
         filter: brightness(100%);
     }
 
-    20% {
+    10% {
+        filter: brightness(360%);
+    }
+
+    25% {
+        filter: brightness(100%);
+    }
+
+    35% {
+        filter: brightness(360%);
+    }
+
+    40% {
+        filter: brightness(100%);
+    }
+
+    45% {
         filter: brightness(360%);
     }
 
@@ -99,20 +120,8 @@
         filter: brightness(100%);
     }
 
-    70% {
-        filter: brightness(360%);
-    }
-
-    80% {
-        filter: brightness(100%);
-    }
-
-    90% {
-        filter: brightness(360%);
-    }
-
     100% {
         filter: brightness(100%);
     }
 
-} 
+}

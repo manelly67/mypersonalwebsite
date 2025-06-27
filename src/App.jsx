@@ -1,21 +1,20 @@
 import { useState, useEffect } from "react";
-import rain_large from "./assets/img/rain/large_raining.jpg";
-import rain_medium from "./assets/img/rain/medium_raining.jpg";
-import rain_small from "./assets/img/rain/small_raining.jpg";
-import sun_large from "./assets/img/sun/sunny_day_large.jpg";
-import sun_medium from "./assets/img/sun/sunny_day_medium.jpg";
-import sun_small from "./assets/img/sun/sunny_day_small.jpg";
+/* assets */
 import Icon from "@mdi/react";
 import { mdiCircleDouble } from "@mdi/js";
 import { mdiUmbrella } from "@mdi/js";
 import { mdiSunglasses } from "@mdi/js";
+/* styles */
 import "./styles/App.css";
-import ToggleTheme from "./components/ToggleTheme";
+import styles from "./styles/Buttons.module.css";
+/* animation components */
 import Raining from "./animation/Raining";
 import Sunny from "./animation/Sunny";
+import animation from "./animation/Slides.module.css";
+import { fading } from "./animation/auxFunct";
+/* components and content */
+import ToggleTheme from "./components/ToggleTheme";
 import Projects from "./components/Projects";
-import styles1 from "./styles/Slides.module.css";
-import styles2 from "./styles/Buttons.module.css";
 import { myName, textContentAboutMe } from "./assets/text-content";
 
 function App() {
@@ -34,38 +33,16 @@ function App() {
   const [selectedProj, setSelectedProj] = useState(null);
   const pictureIn = activeIndex === 0 ? false : true;
 
-  const { animateIn, animateOut, rotate, shining } = styles1;
-  const { buttonD } = styles2;
+  const { animateIn, rotate } = animation;
+  const { buttonD } = styles;
 
   useEffect(() => {
     setScreenWidth(window.innerWidth);
     setScreenHeight(window.innerHeight);
   }, [screenWidth, screenHeight]);
 
-  function fading() {
-    const picture = document.querySelector("picture");
-    if (picture) {
-      picture.className = animateOut;
-    }
-  }
-
   function clear() {
     setActiveIndex(0);
-    clearAnyInterval();
-  }
-
-  function clearAnyInterval() {
-    if (setInterval(sunglassesAnimation)) {
-      clearInterval(sunglassesAnimation);
-    }
-  }
-
-  function sunglassesAnimation() {
-    const div = document.getElementById("sunglasses");
-    if (div) {
-      div.className = "";
-      div.className = `${shining}`;
-    }
   }
 
   return (
@@ -101,9 +78,6 @@ function App() {
           <Raining
             screenWidth={screenWidth}
             screenHeight={screenHeight}
-            rain_large={rain_large}
-            rain_medium={rain_medium}
-            rain_small={rain_small}
             isActive={activeIndex === 1}
             onShow={() => setActiveIndex(1)}
             fading={fading}
@@ -111,13 +85,9 @@ function App() {
           <Sunny
             screenWidth={screenWidth}
             screenHeight={screenHeight}
-            sun_large={sun_large}
-            sun_medium={sun_medium}
-            sun_small={sun_small}
             isActive={activeIndex === 2}
             onShow={() => setActiveIndex(2)}
             fading={fading}
-            sunglassesAnimation={sunglassesAnimation}
           />
           <button
             className={buttonD}
@@ -137,9 +107,6 @@ function App() {
             setShowDetails={setShowDetails}
           />
         ) : null}
-
-
-        
       </main>
     </>
   );
