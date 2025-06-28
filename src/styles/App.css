@@ -24,7 +24,6 @@ main>aside>picture {
 
 header {
   position: relative;
-  height: 100px;
   padding-bottom: calc(0.01*100vh);
 
 }
@@ -49,8 +48,8 @@ header {
   height: 100%;
   background-color: var(--color-bg-first);
   box-shadow:
-    1px 1px var(--color-bg-second),
-    -1em 0 0.4em var(--color-bg-second);
+    1px 1px var(--color-article-shadow),
+    -1em 0 0.4em var(--color-article-shadow);
 }
 
 header>div>h1 {
@@ -88,6 +87,9 @@ header>div>h1 {
     gap: 4px;
   }
 
+  header {
+    height: 150px;
+  }
 }
 
 @media screen and (min-width: 401px) {
@@ -110,6 +112,10 @@ header>div>h1 {
     display: flex;
     flex-direction: column;
     gap: 10px;
+  }
+
+  header {
+    height: 100px;
   }
 
 }
@@ -152,6 +158,7 @@ header>div>h1 {
   .aboutMe {
     padding: 2em 0 2em 0;
   }
+
 }
 
 @media screen and (min-width: 981px) {
