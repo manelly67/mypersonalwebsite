@@ -19,7 +19,7 @@ const Raining = (props) => {
   const { animateIn } = styles1;
   const { buttonB } = styles2;
   const imgWidth =
-    screenWidth <= 391
+    screenWidth <= 430
       ? screenWidth
       : screenWidth > 980
       ? screenWidth * 0.5

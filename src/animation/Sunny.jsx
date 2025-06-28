@@ -18,7 +18,7 @@ const Sunny = (props) => {
   const { animateIn, bright } = styles1;
   const { buttonC } = styles2;
   const imgWidth =
-    screenWidth <= 391
+    screenWidth <= 430
       ? screenWidth
       : screenWidth > 980
       ? screenWidth * 0.5
@@ -33,7 +33,7 @@ const Sunny = (props) => {
           <picture id="sun_img" className={animateIn}>
             <source media="(min-width: 981px)" srcSet={sun_large} />
             <source
-              media="(min-width:391px) and (max-width:980px)"
+              media="(min-width:431px) and (max-width:980px)"
               srcSet={sun_medium}
             />
             <img
