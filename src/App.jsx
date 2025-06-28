@@ -37,18 +37,22 @@ function App() {
   const { buttonD } = styles;
 
   useEffect(() => {
-    setScreenWidth(window.innerWidth);
-    setScreenHeight(window.innerHeight);
+     setScreenWidth(window.screen.width);
+     setScreenHeight(window.screen.height);
   }, [screenWidth, screenHeight]);
 
   function clear() {
     setActiveIndex(0);
   }
-
+ 
   return (
     <>
       <main>
-        <section className={animateIn}>
+        <section
+          className={
+            !pictureIn ? `${animateIn} expanded` : `${animateIn} strechted`
+          }
+        >
           <header>
             <div className={!pictureIn ? "headerDiv" : "headerPict"}>
               <h1>{myName}</h1>
@@ -72,12 +76,12 @@ function App() {
             </div>
           </section>
           {!showDetails ? (
-          <Projects
-            setSelectedProj={setSelectedProj}
-            setShowDetails={setShowDetails}
-            pictureIn={pictureIn}
-          />
-        ) : null}
+            <Projects
+              setSelectedProj={setSelectedProj}
+              setShowDetails={setShowDetails}
+              pictureIn={pictureIn}
+            />
+          ) : null}
         </section>
 
         <aside>
@@ -107,8 +111,6 @@ function App() {
             <Icon path={mdiCircleDouble} size={1} />
           </button>
         </aside>
-
-       
       </main>
     </>
   );
