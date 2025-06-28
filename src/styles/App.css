@@ -12,8 +12,12 @@ main>section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
 }
+
+.expanded {
+  width: 97%;
+}
+
 
 main>aside>picture {
   position: fixed;
@@ -70,18 +74,21 @@ header>div>h1 {
   font-size: 12px;
 }
 
-/* main and  aside */
+/* main and  aside for screens*/
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 430px) {
   main {
     display: grid;
     grid-template-rows: 100px 1fr;
     grid-template-columns: calc(100vw * 0.9);
   }
 
-  aside {
-    grid-row: 1/2;
+  main>section {
+    grid-row: 2/3;
     grid-column: 1/2;
+  }
+
+  aside {
     display: flex;
     flex-direction: row;
     gap: 4px;
@@ -92,13 +99,13 @@ header>div>h1 {
   }
 }
 
-@media screen and (min-width: 401px) {
+@media screen and (min-width: 431px) {
   main {
     width: 100vw;
     height: 100%;
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 85% 15%;
+    grid-template-columns: 87% 13%;
   }
 
   main>section {
@@ -106,9 +113,8 @@ header>div>h1 {
     grid-column: 1/2;
   }
 
+
   aside {
-    grid-row: 1/2;
-    grid-column: 2/3;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -120,38 +126,81 @@ header>div>h1 {
 
 }
 
+/* stretched for screens */
+
+@media screen and (max-width: 400px) {
+
+  .strechted {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+}
+
+@media screen and (min-width:401px) and (max-width:980px) {
+
+  .strechted {
+    width: 70%;
+    min-width: 380px;
+    margin: 0 auto;
+  }
+
+}
+
+
+@media screen and (min-width: 981px) {
+
+  .strechted {
+    width: 50%;
+    margin-left: 48%;
+    margin-right: 0.5%;
+  }
+
+}
+
+
+
 /* aboutMe and aboutMeHalf */
 
 .aboutMe,
 .aboutMeHalf {
+  margin-top: 20px;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  background-color: transparent;
+  border-radius: 6px 6px 6px 6px;
+  box-shadow: var(--color-article-shadow) 2px 2px 4px 2px;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 15px;
-  padding-top: 40px;
+
 }
 
 .aboutMe>div,
 .aboutMeHalf>div {
   width: 80%;
   margin: 0 auto;
+  background-color: var(--color-bg-second);
+  padding: 0.5em;
 }
 
-.aboutMe>div+div > h3, .aboutMe>div+div > p{
+.aboutMe>div+div>h3,
+.aboutMe>div+div>p {
   margin-left: 2px;
   text-align: left;
   padding-bottom: 0.2em;
 }
 
-.aboutMe>div+div > p{
+.aboutMe>div+div>p {
   line-height: 1.5;
   font-size: 1.2rem;
 }
 
-.aboutMe>div+div > p>span{
- font-size: larger;
- padding-right: 2px;
+.aboutMe>div+div>p>span {
+  font-size: larger;
+  padding-right: 2px;
 }
 
 @media screen and (max-width: 980px) {
