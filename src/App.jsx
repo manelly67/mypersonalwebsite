@@ -58,7 +58,7 @@ function App() {
               <h1>{myName}</h1>
             </div>
           </header>
-          <section className={!pictureIn ? "aboutMe" : "aboutMeHalf"}>
+          <section className={!pictureIn ? "aboutMe" : "aboutMeHalf"} translate="yes" >
             <div>
               {activeIndex === 1 ? (
                 <Icon path={mdiUmbrella} size={2} />
