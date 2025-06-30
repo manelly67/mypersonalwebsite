@@ -15,7 +15,12 @@ import { fading } from "./animation/auxFunct";
 /* components and content */
 import ToggleTheme from "./components/ToggleTheme";
 import Projects from "./components/Projects";
-import { myName, textContentAboutMe } from "./assets/text-content";
+import Details from "./components/Details";
+import {
+  myName,
+  textContentAboutMe,
+  arrayProjects,
+} from "./assets/text-content";
 
 function App() {
   const body = document.querySelector("body");
@@ -26,7 +31,7 @@ function App() {
   if (titleDiv) {
     titleDiv.textContent = `${myName}'s Portfolio`;
   }
-  const [key, setKey ] = useState(0);
+  const [key, setKey] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
   const [screenWidth, setScreenWidth] = useState(0);
   const [screenHeight, setScreenHeight] = useState(0);
@@ -38,16 +43,15 @@ function App() {
   const { buttonD } = styles;
 
   useEffect(() => {
-     setScreenWidth(window.screen.width);
-     setScreenHeight(window.screen.height);
+    setScreenWidth(window.screen.width);
+    setScreenHeight(window.screen.height);
   }, [screenWidth, screenHeight]);
 
-  
   function clear() {
-    setKey(prevKey => prevKey + 1);
+    setKey((prevKey) => prevKey + 1);
     setActiveIndex(0);
   }
- 
+
   return (
     <>
       <main>
@@ -63,17 +67,20 @@ function App() {
 
               {activeIndex === 1 ? (
                 <div id="umbrella">
-                <Icon path={mdiUmbrella} size={2} className={rotate} />
+                  <Icon path={mdiUmbrella} size={2} className={rotate} />
                 </div>
               ) : activeIndex === 2 ? (
-                <div id="sunglasses" className={shining} >
+                <div id="sunglasses" className={shining}>
                   <Icon path={mdiSunglasses} size={2} className={rotate} />
                 </div>
               ) : null}
             </div>
           </header>
 
-          <section className={!pictureIn ? "aboutMe" : "aboutMeHalf"} translate="yes" >
+          <section
+            className={!pictureIn ? "aboutMe" : "aboutMeHalf"}
+            translate="yes"
+          >
             <div>
               <h2>My portfolio</h2>
             </div>
@@ -81,23 +88,26 @@ function App() {
             <div>
               <h3>About Me</h3>
               {!textContentAboutMe ? null : textContentAboutMe}
-            </div>  
+            </div>
           </section>
-          
+
           {!showDetails ? (
             <Projects
               setSelectedProj={setSelectedProj}
               setShowDetails={setShowDetails}
-              pictureIn={pictureIn}
+              arrayProjects={arrayProjects}
             />
-          ) : null}
+          ) : (
+            <Details
+              selectedProj={selectedProj}
+              setShowDetails={setShowDetails}
+              arrayProjects={arrayProjects}
+            />
+          )}
         </section>
 
         <aside>
-          <ToggleTheme 
-          theme="light" 
-          setKey={setKey}
-          />
+          <ToggleTheme theme="light" setKey={setKey} />
           <Raining
             screenWidth={screenWidth}
             screenHeight={screenHeight}

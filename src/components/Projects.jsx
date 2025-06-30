@@ -1,11 +1,11 @@
 import Icon from "@mdi/react";
 import { mdiOpenInNew } from "@mdi/js";
-import { arrayProjects } from "../assets/text-content";
 import { github } from "../assets/icons-source";
 import styles from "../styles/Projects.module.css";
 import buttons from "../styles/Buttons.module.css";
 
 const Projects = (props) => {
+  const {setSelectedProj, setShowDetails, arrayProjects } = props;
   const githubImg = new Image();
   githubImg.src = github;
   const {
@@ -54,7 +54,13 @@ const Projects = (props) => {
       </div>
       <div className={divDescriptionArticle}>
         <p>{e.projectDescription}</p>
-        <button className={buttonE}>project details</button>
+        <button 
+         onClick={()=>{
+          setSelectedProj(e.id);
+          setShowDetails(true);
+         }}
+        className={buttonE}
+        >project details</button>
       </div>
     </article>
   ));
