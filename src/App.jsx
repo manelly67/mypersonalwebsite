@@ -26,6 +26,7 @@ function App() {
   if (titleDiv) {
     titleDiv.textContent = `${myName}'s Portfolio`;
   }
+  const [key, setKey ] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
   const [screenWidth, setScreenWidth] = useState(0);
   const [screenHeight, setScreenHeight] = useState(0);
@@ -41,7 +42,9 @@ function App() {
      setScreenHeight(window.screen.height);
   }, [screenWidth, screenHeight]);
 
+  
   function clear() {
+    setKey(prevKey => prevKey + 1);
     setActiveIndex(0);
   }
  
@@ -49,6 +52,7 @@ function App() {
     <>
       <main>
         <section
+          key={key}
           className={
             !pictureIn ? `${animateIn} expanded` : `${animateIn} strechted`
           }
@@ -85,7 +89,10 @@ function App() {
         </section>
 
         <aside>
-          <ToggleTheme theme="light" />
+          <ToggleTheme 
+          theme="light" 
+          setKey={setKey}
+          />
           <Raining
             screenWidth={screenWidth}
             screenHeight={screenHeight}
