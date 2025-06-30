@@ -228,6 +228,10 @@ header>div>h1 {
   }
 }
 
+#umbrella{
+  transform: translateY(-10%);
+}
+
 #sunglasses {
   color: var(--color-sunglasses);
   transform: translateY(-20%);

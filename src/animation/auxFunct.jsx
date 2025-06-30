@@ -1,6 +1,6 @@
 import styles from "./Slides.module.css";
 
-const { animateOut, shining } = styles;
+const { animateOut } = styles;
 
 function fading() {
   const picture = document.querySelector("picture");
@@ -9,12 +9,5 @@ function fading() {
   }
 }
 
-function sunglassesAnimation() {
-  const div = document.getElementById("sunglasses");
-  if (div) {
-    div.className = "";
-    div.className = `${shining}`;
-  }
-}
 
-export { fading, sunglassesAnimation };
+export { fading };

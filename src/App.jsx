@@ -11,7 +11,7 @@ import styles from "./styles/Buttons.module.css";
 import Raining from "./animation/Raining";
 import Sunny from "./animation/Sunny";
 import animation from "./animation/Slides.module.css";
-import { fading, sunglassesAnimation } from "./animation/auxFunct";
+import { fading } from "./animation/auxFunct";
 /* components and content */
 import ToggleTheme from "./components/ToggleTheme";
 import Projects from "./components/Projects";
@@ -62,7 +62,9 @@ function App() {
               <h1>{myName}</h1>
 
               {activeIndex === 1 ? (
-                <Icon path={mdiUmbrella} size={2} />
+                <div id="umbrella">
+                <Icon path={mdiUmbrella} size={2} className={rotate} />
+                </div>
               ) : activeIndex === 2 ? (
                 <div id="sunglasses" className={shining} >
                   <Icon path={mdiSunglasses} size={2} className={rotate} />
