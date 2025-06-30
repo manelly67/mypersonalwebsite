@@ -11,7 +11,7 @@ import styles from "./styles/Buttons.module.css";
 import Raining from "./animation/Raining";
 import Sunny from "./animation/Sunny";
 import animation from "./animation/Slides.module.css";
-import { fading } from "./animation/auxFunct";
+import { fading, sunglassesAnimation } from "./animation/auxFunct";
 /* components and content */
 import ToggleTheme from "./components/ToggleTheme";
 import Projects from "./components/Projects";
@@ -34,7 +34,7 @@ function App() {
   const [selectedProj, setSelectedProj] = useState(null);
   const pictureIn = activeIndex === 0 ? false : true;
 
-  const { animateIn, rotate } = animation;
+  const { animateIn, rotate, shining } = animation;
   const { buttonD } = styles;
 
   useEffect(() => {
@@ -60,25 +60,28 @@ function App() {
           <header>
             <div className={!pictureIn ? "headerDiv" : "headerPict"}>
               <h1>{myName}</h1>
-            </div>
-          </header>
-          <section className={!pictureIn ? "aboutMe" : "aboutMeHalf"} translate="yes" >
-            <div>
+
               {activeIndex === 1 ? (
                 <Icon path={mdiUmbrella} size={2} />
               ) : activeIndex === 2 ? (
-                <div id="sunglasses">
+                <div id="sunglasses" className={shining} >
                   <Icon path={mdiSunglasses} size={2} className={rotate} />
                 </div>
               ) : null}
+            </div>
+          </header>
+
+          <section className={!pictureIn ? "aboutMe" : "aboutMeHalf"} translate="yes" >
+            <div>
               <h2>My portfolio</h2>
             </div>
 
             <div>
               <h3>About Me</h3>
               {!textContentAboutMe ? null : textContentAboutMe}
-            </div>
+            </div>  
           </section>
+          
           {!showDetails ? (
             <Projects
               setSelectedProj={setSelectedProj}

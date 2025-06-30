@@ -5,7 +5,6 @@ import Icon from '@mdi/react';
 import { mdiWeatherSunny } from '@mdi/js';
 import styles1 from "./Slides.module.css";
 import styles2 from "../styles/Buttons.module.css";
-import { sunglassesAnimation } from './auxFunct';
 
 const Sunny = (props) => {
   const {
@@ -83,7 +82,6 @@ const Sunny = (props) => {
             onClick={() => {
               fading();
               setTimeout(onShow, 599);
-              setTimeout(sunglassesAnimation, 4000);
             }}
             aria-label="Weather Sunny"
           >
