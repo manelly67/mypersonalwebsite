@@ -28,6 +28,7 @@ article {
    margin: 0 auto;
    border-left: var(--color-bg-second) solid 3px;
    border-right: var(--color-bg-second) solid 3px;
+  /*  object-fit: cover; */
  }
 
 @media screen and (min-width: 981px) {
