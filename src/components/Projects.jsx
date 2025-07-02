@@ -52,13 +52,13 @@ const Projects = (props) => {
       </div>
       <div className={divDescriptionArticle}>
         <p>{e.projectDescription}</p>
-        <button 
+  {/*       <button 
          onClick={()=>{
           setSelectedProj(e.id);
           setShowDetails(true);
          }}
         className={buttonE}
-        >project details</button>
+        >project details</button> */}
       </div>
     </article>
   ));
