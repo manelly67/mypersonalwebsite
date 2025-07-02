@@ -15,11 +15,16 @@ import { fading } from "./animation/auxFunct";
 /* components and content */
 import ToggleTheme from "./components/ToggleTheme";
 import Projects from "./components/Projects";
+import ContactMe from "./components/ContactMe";
 import Details from "./components/Details";
 import {
   myName,
   textContentAboutMe,
   arrayProjects,
+  textContentContactMe,
+  mailText,
+  githubAccount,
+  linkedinAccount,
 } from "./assets/text-content";
 
 function App() {
@@ -104,6 +109,15 @@ function App() {
               arrayProjects={arrayProjects}
             />
           )}
+
+          <ContactMe
+           pictureIn={pictureIn}
+           screenWidth={screenWidth}
+           textContentContactMe={textContentContactMe}
+           mailText={mailText}
+           githubAccount={githubAccount}
+           linkedinAccount={linkedinAccount}
+          />
         </section>
 
         <aside>
