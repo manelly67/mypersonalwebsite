@@ -1,9 +1,11 @@
-import screenshot1 from "./img/screenshot-project1.png";
-import screenshot2 from "./img/screenshot-project2.png";
-import screenshot3 from "./img/screenshot-project3.png";
-import screenshot4 from "./img/screenshot-project4.png";
-import screenshot5 from "./img/screenshot-project5.png";
-import screenshot6 from "./img/screenshot-project6.png";
+import screenshot1 from "./img/screenshot-project1.jpg";
+import screenshot2 from "./img/screenshot-project2.jpg";
+import screenshot3 from "./img/screenshot-project3.jpg";
+import screenshot4 from "./img/screenshot-project4.jpg";
+import screenshot5 from "./img/screenshot-project5.jpg";
+import screenshot6 from "./img/screenshot-project6.jpg";
+import screenshot7 from "./img/screenshot-project7.jpg";
+
 import { Project } from "./class-project";
 
 const myName = "Maria Nelly Lopez";
@@ -89,7 +91,7 @@ project6.projectNewWindow = "https://memory-game-manelly67.netlify.app";
 const project7 = new Project("project7");
 project7.projectName = "Weather App";
 project7.projectDescription = "Javascript Data Fetching.";
-project7.screenshotProjectSource = screenshot6;
+project7.screenshotProjectSource = screenshot7;
 project7.githubHref = "https://github.com/manelly67/TheOdinProject-WeatherApp";
 project7.projectNewWindow =
   "https://manelly67.github.io/TheOdinProject-WeatherApp";
