@@ -23,11 +23,12 @@ article {
   box-shadow: var(--color-article-shadow) 2px 2px 4px 2px;
 }
 
-.projectImg {
-  object-fit: cover;
-  border-radius: 0px;
-}
-
+ .projectImg {
+   display: grid;
+   margin: 0 auto;
+   border-left: var(--color-bg-second) solid 3px;
+   border-right: var(--color-bg-second) solid 3px;
+ }
 
 @media screen and (min-width: 981px) {
 
@@ -46,9 +47,12 @@ article {
   }
 
   .projectImg {
-    width: var(--defining-width);
-    height: calc(var(--defining-width)* 1.1);
-  }
+    width: calc(var(--defining-width)*0.9);
+    max-width: var(--defining-width);
+    height: auto;
+    max-height: 230px;
+  } 
+
 
   .divDescriptionArticle>p {
     padding-top: 3%;
@@ -66,7 +70,6 @@ article {
     column-gap: 20px;
   }
 
-
   article {
     --defining-width: 95%;
     width: var(--defining-width);
@@ -74,9 +77,12 @@ article {
   }
 
   .projectImg {
-    width: var(--defining-width);
-    height: calc(var(--defining-width));
-  }
+    width: auto;
+    max-width: var(--defining-width);
+    height: var(--defining-width);
+    max-height: 230px;
+  } 
+
 }
 
 
@@ -96,9 +102,11 @@ article {
   }
 
   .projectImg {
-    width: var(--defining-width);
-    height: calc(var(--defining-width));
-  }
+    width: auto;
+    max-width: var(--defining-width);
+    height: var(--defining-width);
+    max-height: 230px;
+  } 
 
 }
 
