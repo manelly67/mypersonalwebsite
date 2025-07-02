@@ -38,7 +38,7 @@ const Projects = (props) => {
             rel="noopener noreferrer"
             title="github repository"
           >
-            <img src={githubImg.src} width="30px" height="30px" className={shadow}/>
+            <img src={githubImg.src} width="30px" height="30px" className={shadow} alt="github icon"/>
           </a>
           <a
             href={e.projectNewWindow}

@@ -53,6 +53,7 @@ const ContactMe = (props) => {
                   width="30px"
                   height="30px"
                   className="shadow"
+                  alt="linkedin icon"
                 />
               </a>
               <p>{linkedinAccount}</p>
@@ -63,6 +64,7 @@ const ContactMe = (props) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 title="linkedin account"
+                alt="github icon"
               >
                 <img
                   src={githubImg.src}
