@@ -76,6 +76,7 @@ const Raining = (props) => {
               fading();
               setTimeout(onShow, 599);
             }}
+            aria-label="Weather rainy"
           >
             <Icon path={mdiWeatherRainy} size={1} />
           </button>
