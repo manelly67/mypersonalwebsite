@@ -2,8 +2,9 @@ import { github } from "../assets/icons-source";
 import { linkedin } from "../assets/icons-source";
 import Icon from "@mdi/react";
 import { mdiEmailOutline } from "@mdi/js";
-import { mdiFileDownload } from '@mdi/js';
+import { mdiFileDownload } from "@mdi/js";
 import photo from "../assets/img/photo-footer.png";
+import file from "../assets/marianellylopezCV.pdf";
 
 const ContactMe = (props) => {
   const {
@@ -61,7 +62,7 @@ const ContactMe = (props) => {
                 href={githubAccount}
                 target="_blank"
                 rel="noopener noreferrer"
-                title="github account"
+                title="linkedin account"
               >
                 <img
                   src={githubImg.src}
@@ -73,8 +74,14 @@ const ContactMe = (props) => {
               <p>{githubAccount}</p>
             </div>
             <div className="infoRow">
-            <Icon path={mdiFileDownload} size={1.1} />
-            <p>Download CV</p>
+              <a 
+              href={file} 
+              download="marianellylopezCV.pdf"
+              title="download CV"
+              >
+                <Icon path={mdiFileDownload} size={1.1} />
+              </a>
+              <p>Download CV</p>
             </div>
           </div>
 
