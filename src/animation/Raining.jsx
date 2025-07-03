@@ -1,20 +1,14 @@
+import { useEffect,useCallback } from "react";
 import rain_large from "../assets/img/rain/large_raining.jpg";
 import rain_medium from "../assets/img/rain/medium_raining.jpg";
 import rain_small from "../assets/img/rain/small_raining.jpg";
-import Icon from '@mdi/react';
-import { mdiWeatherRainy } from '@mdi/js';
+import Icon from "@mdi/react";
+import { mdiWeatherRainy } from "@mdi/js";
 import styles1 from "./Slides.module.css";
 import styles2 from "../styles/Buttons.module.css";
 
-
 const Raining = (props) => {
-  const {
-    isActive,
-    onShow,
-    screenWidth,
-    screenHeight,
-    fading,
-  } = props;
+  const { isActive, onShow, screenWidth, screenHeight, fading, setCoords, setEndcoords } = props;
 
   const { animateIn } = styles1;
   const { buttonB } = styles2;
@@ -24,6 +18,29 @@ const Raining = (props) => {
       : screenWidth > 980
       ? screenWidth * 0.5
       : screenWidth * 0.85;
+
+      const getImgCoord = useCallback((arg) => {
+        const imageRef = arg.firstChild;
+        if (imageRef) {
+          const rect = imageRef.getBoundingClientRect();
+          setCoords({
+            x: Number(rect.left.toFixed(10)),
+            y: Number(rect.top.toFixed(10)),
+          });
+          setEndcoords({
+            x: Number(rect.right.toFixed(10)),
+            y: Number(rect.bottom.toFixed(10)),
+          });
+        }
+      }, [setCoords,setEndcoords]);
+
+  useEffect(()=>{
+    if(isActive){
+      if (document.getElementById("umbrella") !== null) {
+        getImgCoord(document.getElementById("umbrella"));
+      }
+    }
+  },[isActive, getImgCoord, screenWidth]);
 
   return (
     <>

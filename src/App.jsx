@@ -44,12 +44,22 @@ function App() {
   const [selectedProj, setSelectedProj] = useState(null);
   const pictureIn = activeIndex === 0 ? false : true;
 
+  // pendiente
+
+  const [coords, setCoords] = useState({ x: 0, y: 0 });
+  const [endcoords, setEndcoords] = useState({ x: 0, y: 0 });
+  const middleX =
+    Number(coords.x) + (Number(endcoords.x) - Number(coords.x)) / 2;
+
+   // pendiente
+
   const { animateIn, rotate, shining } = animation;
   const { buttonD } = styles;
 
   useEffect(() => {
     setScreenWidth(window.screen.width);
     setScreenHeight(window.screen.height);
+    setKey((prevKey) => prevKey + 1);
   }, [screenWidth, screenHeight]);
 
   function clear() {
@@ -111,12 +121,12 @@ function App() {
           )}
 
           <ContactMe
-           pictureIn={pictureIn}
-           screenWidth={screenWidth}
-           textContentContactMe={textContentContactMe}
-           mailText={mailText}
-           githubAccount={githubAccount}
-           linkedinAccount={linkedinAccount}
+            pictureIn={pictureIn}
+            screenWidth={screenWidth}
+            textContentContactMe={textContentContactMe}
+            mailText={mailText}
+            githubAccount={githubAccount}
+            linkedinAccount={linkedinAccount}
           />
         </section>
 
@@ -128,6 +138,8 @@ function App() {
             isActive={activeIndex === 1}
             onShow={() => setActiveIndex(1)}
             fading={fading}
+            setCoords={setCoords}
+            setEndcoords={setEndcoords}
           />
           <Sunny
             screenWidth={screenWidth}
