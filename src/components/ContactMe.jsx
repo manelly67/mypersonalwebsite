@@ -56,7 +56,7 @@ const ContactMe = (props) => {
                   alt="linkedin icon"
                 />
               </a>
-              <p>{linkedinAccount}</p>
+              <p style={{wordWrap:"break-word",width:"82%"}}>{linkedinAccount}</p>
             </div>
             <div className="infoRow">
               <a
