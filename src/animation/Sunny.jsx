@@ -1,19 +1,13 @@
 import sun_large from "../assets/img/sun/sunny_day_large.jpg";
 import sun_medium from "../assets/img/sun/sunny_day_medium.jpg";
 import sun_small from "../assets/img/sun/sunny_day_small.jpg";
-import Icon from '@mdi/react';
-import { mdiWeatherSunny } from '@mdi/js';
+import Icon from "@mdi/react";
+import { mdiWeatherSunny } from "@mdi/js";
 import styles1 from "./Slides.module.css";
 import styles2 from "../styles/Buttons.module.css";
 
 const Sunny = (props) => {
-  const {
-    isActive,
-    onShow,
-    screenWidth,
-    screenHeight,
-    fading,
-  } = props;
+  const { isActive, onShow, screenWidth, screenHeight, fading } = props;
   const { animateIn, bright } = styles1;
   const { buttonC } = styles2;
   const imgWidth =
@@ -23,7 +17,7 @@ const Sunny = (props) => {
       ? screenWidth * 0.5
       : screenWidth * 0.85;
 
-  
+  const imgHeight = screenWidth <= 430 ? screenHeight * 1.1 : screenHeight;
 
   return (
     <>
@@ -38,7 +32,7 @@ const Sunny = (props) => {
             <img
               src={sun_small}
               width={imgWidth}
-              height={screenHeight}
+              height={imgHeight}
               style={{
                 backgroundImage: "url(/src/assets/img/sun/lo_sunny.jpg)",
               }}
