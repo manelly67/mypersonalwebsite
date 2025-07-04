@@ -27,7 +27,7 @@ const textContentAboutMe = (
 );
 
 const textContentContactMe =
-  "If you think my work fits what you need, write to me.";
+  "If you think that my work fits what you need and that I can contribute to your work team, write to me.";
 
 const mailText = "manellylopez@yahoo.com";
 
