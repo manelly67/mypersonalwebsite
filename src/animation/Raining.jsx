@@ -69,9 +69,6 @@ const Raining = (props) => {
               src={rain_small}
               width={imgWidth}
               height={imgHeight}
-              style={{
-                backgroundImage: "url(/src/assets/img/rain/lo_raining.jpg)",
-              }}
               alt="water droplets on the windshield of the car"
             />
           </picture>

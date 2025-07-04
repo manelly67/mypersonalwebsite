@@ -33,9 +33,6 @@ const Sunny = (props) => {
               src={sun_small}
               width={imgWidth}
               height={imgHeight}
-              style={{
-                backgroundImage: "url(/src/assets/img/sun/lo_sunny.jpg)",
-              }}
               alt="flock of birds flying under a blue sky on a sunny day"
             />
           </picture>
