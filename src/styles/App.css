@@ -268,6 +268,11 @@ header>div>h1 {
     justify-content: flex-start;
     padding: 2em 0 2em 0;
   }
+
+  #linkedinText{
+    word-wrap: break-word;
+    width: 80%;
+  }
 }
 
 @media screen and (min-width: 981px) {
@@ -278,7 +283,10 @@ header>div>h1 {
     flex-direction: row;
     justify-content: space-around;
     padding: 5em 0.2em 5em 0.2em;
+  }
 
+  #linkedinText{
+    word-wrap: none;
   }
 }
 

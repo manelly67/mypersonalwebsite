@@ -26,16 +26,16 @@ article {
  .projectImg {
    display: grid;
    margin: 0 auto;
+   padding-top: 1%;
    border-left: var(--color-bg-second) solid 3px;
    border-right: var(--color-bg-second) solid 3px;
-  /*  object-fit: cover; */
  }
 
 @media screen and (min-width: 981px) {
 
   .content {
     display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(210px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(350px, 1fr));
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     row-gap: 40px;
     column-gap: 20px;
@@ -50,7 +50,7 @@ article {
   .projectImg {
     width: calc(var(--defining-width)*0.9);
     max-width: var(--defining-width);
-    height: auto;
+    height: var(--defining-width);
     max-height: 230px;
   } 
 
@@ -81,7 +81,7 @@ article {
     width: auto;
     max-width: var(--defining-width);
     height: var(--defining-width);
-    max-height: 230px;
+    max-height: 210px;
   } 
 
 }
@@ -106,7 +106,7 @@ article {
     width: auto;
     max-width: var(--defining-width);
     height: var(--defining-width);
-    max-height: 230px;
+    max-height: 210px;
   } 
 
 }

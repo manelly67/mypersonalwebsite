@@ -26,6 +26,7 @@ const ContactMe = (props) => {
       : screenWidth > 980
       ? screenWidth * 0.2
       : screenWidth * 0.3;
+  const imgHeigth = Math.round(imgWidth * 1.03);
 
   return (
     <>
@@ -46,7 +47,7 @@ const ContactMe = (props) => {
                 href={linkedinAccount}
                 target="_blank"
                 rel="noopener noreferrer"
-                title="github account"
+                title="linkedin account"
               >
                 <img
                   src={linkedinImg.src}
@@ -56,21 +57,22 @@ const ContactMe = (props) => {
                   alt="linkedin icon"
                 />
               </a>
-              <p style={{wordWrap:"break-word",width:"82%"}}>{linkedinAccount}</p>
+              <p id="linkedinText">{linkedinAccount}</p>
             </div>
             <div className="infoRow">
               <a
                 href={githubAccount}
                 target="_blank"
                 rel="noopener noreferrer"
-                title="linkedin account"
-                alt="github icon"
+                title="github account"
+               
               >
                 <img
                   src={githubImg.src}
                   width="30px"
                   height="30px"
                   className="shadow"
+                  alt="github icon"
                 />
               </a>
               <p>{githubAccount}</p>
@@ -78,6 +80,8 @@ const ContactMe = (props) => {
             <div className="infoRow">
               <a 
               href={file} 
+              target="_blank"
+              rel="noopener noreferrer"
               download="marianellylopezCV.pdf"
               title="download CV"
               >
@@ -91,7 +95,7 @@ const ContactMe = (props) => {
             src={photo}
             style={{ alignSelf: "flex-end", paddingRight: "2%" }}
             width={imgWidth}
-            height="auto"
+            height={imgHeigth}
             alt={`portfolio's owner`}
           />
         </div>

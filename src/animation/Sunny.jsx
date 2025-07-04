@@ -12,7 +12,7 @@ const Sunny = (props) => {
   const { buttonC } = styles2;
   const imgWidth =
     screenWidth <= 430
-      ? screenWidth
+      ? screenWidth * 1.1
       : screenWidth > 980
       ? screenWidth * 0.5
       : screenWidth * 0.85;

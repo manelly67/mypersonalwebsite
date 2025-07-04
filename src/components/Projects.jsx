@@ -27,6 +27,8 @@ const Projects = (props) => {
           src={e.screenshotProjectSource}
           className={projectImg} 
           alt={`screenshot project ${e.projectName} github manelly67`}
+          width="400px"
+          height="270px"
         />
       </div>
       <div className={divNameArticle}>
