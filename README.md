@@ -8,7 +8,7 @@ https://marianellylopez.netlify.app/
 
 ### CSS styles ###
 - Responsive design for screens of different sizes.
-- Using @keyframe animation to create an effect where the element moves in and out while also when they rotate and shine.
+- Using @keyframe animation to create an effect where the element moves in and out while also when they rotate, shine and drip.
 - The backdrop_filter brigtheness was used for the initial brightness of the sunny day
 
 ### Picture and srcset ###

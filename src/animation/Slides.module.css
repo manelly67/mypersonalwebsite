@@ -126,3 +126,29 @@
     }
 
 }
+
+/* drop */
+
+.suspend {
+    position: fixed;
+    z-index: 3;
+}
+
+.falling {
+    position: fixed;
+    z-index: 3;
+    animation-name: falls;
+    animation-delay: 0.3s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes falls {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100vh);
+    }
+}

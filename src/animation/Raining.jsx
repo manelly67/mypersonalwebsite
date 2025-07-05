@@ -31,7 +31,7 @@ const Raining = (props) => {
 
   const getImgCoord = useCallback(
     (arg) => {
-      const imageRef = arg.firstChild;
+     const imageRef = arg.firstChild; 
       if (imageRef) {
         const rect = imageRef.getBoundingClientRect();
         setCoords({

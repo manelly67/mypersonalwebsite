@@ -9,6 +9,7 @@ import "./styles/App.css";
 import styles from "./styles/Buttons.module.css";
 /* animation components */
 import Raining from "./animation/Raining";
+import dropImg from "./assets/img/rain/drop.png";
 import Sunny from "./animation/Sunny";
 import animation from "./animation/Slides.module.css";
 import { fading } from "./animation/auxFunct";
@@ -27,6 +28,7 @@ import {
   linkedinAccount,
 } from "./assets/text-content";
 
+
 function App() {
   const body = document.querySelector("body");
   if (body) {
@@ -43,24 +45,59 @@ function App() {
   const [showDetails, setShowDetails] = useState(false);
   const [selectedProj, setSelectedProj] = useState(null);
   const pictureIn = activeIndex === 0 ? false : true;
-
-  // pendiente
-
+  const { animateIn, rotate, shining, suspend, falling } = animation;
+  const { buttonD } = styles;
+  // locate the drop
   const [coords, setCoords] = useState({ x: 0, y: 0 });
   const [endcoords, setEndcoords] = useState({ x: 0, y: 0 });
-  const middleX =
-    Number(coords.x) + (Number(endcoords.x) - Number(coords.x)) / 2;
-
-   // pendiente
-
-  const { animateIn, rotate, shining } = animation;
-  const { buttonD } = styles;
+  const wideImg = (Number(endcoords.x) - Number(coords.x));
+  const heightImg = (Number(endcoords.y) - Number(coords.y));
+  const drop = (
+    <img
+      id="drop"
+      src={dropImg}
+      width="10px"
+      height="15px"
+      alt="drop"
+      style={{
+        top: `${coords.y + 0.3 * heightImg }px`,
+        left: `${coords.x + 0.15 * wideImg }px`,
+       }}
+      className={suspend}
+    />
+  )
+ 
 
   useEffect(() => {
     setScreenWidth(window.screen.width);
     setScreenHeight(window.screen.height);
     setKey((prevKey) => prevKey + 1);
   }, [screenWidth, screenHeight]);
+
+  useEffect(()=>{
+    if(activeIndex===1){
+      window.addEventListener('scroll', 
+        () => {
+          if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+            document.getElementById('drop').classList.remove(`${suspend}`);
+            document.getElementById('drop').classList.add(`${falling}`);
+          }
+        },
+        false
+      );
+      return () => {
+        window.removeEventListener('scroll', 
+          () => {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+              document.getElementById('drop').classList.remove(`${suspend}`);
+              document.getElementById('drop').classList.add(`${falling}`);
+            }
+          },
+          false
+        );
+      };
+    }
+  },[activeIndex,suspend,falling]);
 
   function clear() {
     setKey((prevKey) => prevKey + 1);
@@ -70,6 +107,7 @@ function App() {
   return (
     <>
       <main>
+        {activeIndex===1 ? (<>{drop}</> ): null } 
         <section
           key={key}
           className={
