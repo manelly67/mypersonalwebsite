@@ -55,6 +55,31 @@ const Raining = (props) => {
     }
   }, [isActive, getImgCoord, screenWidth]);
 
+
+  useEffect(()=>{
+    if(isActive) {
+      window.addEventListener('resize', 
+        () => {
+          if (document.getElementById("umbrella") !== null) {
+            getImgCoord(document.getElementById("umbrella"));
+          }
+        },
+        false
+      );
+      return () => {
+        window.removeEventListener('resize', 
+          () => {
+            if (document.getElementById("umbrella") !== null) {
+              getImgCoord(document.getElementById("umbrella"));
+            }
+          },
+          false
+        );
+      };
+
+    }
+  },[isActive,getImgCoord]);
+
   return (
     <>
       {isActive ? (

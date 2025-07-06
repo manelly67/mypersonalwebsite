@@ -52,8 +52,10 @@ function App() {
   const [endcoords, setEndcoords] = useState({ x: 0, y: 0 });
   const wideImg = (Number(endcoords.x) - Number(coords.x));
   const heightImg = (Number(endcoords.y) - Number(coords.y));
+  
   const drop = (
     <img
+      key={key}
       id="drop"
       src={dropImg}
       width="10px"
@@ -71,7 +73,6 @@ function App() {
   useEffect(() => {
     setScreenWidth(window.screen.width);
     setScreenHeight(window.screen.height);
-    setKey((prevKey) => prevKey + 1);
   }, [screenWidth, screenHeight]);
 
   useEffect(()=>{
