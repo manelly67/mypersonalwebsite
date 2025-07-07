@@ -27,4 +27,8 @@ https://unsplash.com/es/fotos/gotas-de-agua-en-el-parabrisas-del-coche-g-H8Hn83w
 - The sunny day photo is of Jenna Lee on unsplash.com
 https://unsplash.com/es/fotos/fotografia-de-angulo-bajo-de-bandada-de-pajaros-volando-bajo-el-cielo-azul-durante-el-dia-y_UoVbNBU_Q?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash
 
+- The Linkedin and Github icon was imported from https://cdn.jsdelivr.net
+
+- All other icons used in the project was imported from @mdi/react library https://pictogrammers.com/library/mdi
+
 - The portfolio was deployed in Netlify
