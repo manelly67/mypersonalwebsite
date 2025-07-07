@@ -136,9 +136,9 @@ function App() {
             translate="yes"
           >
             <div>
-              <h2>My portfolio</h2>
+              <h2>NodeJs React Portfolio</h2>
             </div>
-
+           
             <div>
               <h3>About Me</h3>
               {!textContentAboutMe ? null : textContentAboutMe}
