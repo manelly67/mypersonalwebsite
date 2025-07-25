@@ -116,7 +116,7 @@ const additional1 = {
 };
 
 const additionalContent = [
-  additional1,
+  additional1, 
 ];
 
 export {

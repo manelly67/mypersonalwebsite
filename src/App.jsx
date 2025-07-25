@@ -22,6 +22,7 @@ import {
   myName,
   textContentAboutMe,
   arrayProjects,
+  additionalContent,
   textContentContactMe,
   mailText,
   githubAccount,
@@ -150,6 +151,7 @@ function App() {
               setSelectedProj={setSelectedProj}
               setShowDetails={setShowDetails}
               arrayProjects={arrayProjects}
+              additionalContent={additionalContent}
             />
           ) : (
             <Details
