@@ -106,10 +106,24 @@ const arrayProjects = [
   project7,
 ];
 
+const additional1 = {
+  title: "GitHub Achievements",
+  text: "@manelly67 opened pull requests that have been merged in an open source project",
+  PR1_text: "Moved workflow diagram to the next lesson",
+  PR1_link: "https://github.com/TheOdinProject/curriculum/pull/29906",
+  PR2_text: "Added note clarifying about the syntax in the lesson",
+  PR2_link: "https://github.com/TheOdinProject/curriculum/pull/29895",
+};
+
+const additionalContent = [
+  additional1,
+];
+
 export {
   myName,
   textContentAboutMe,
   arrayProjects,
+  additionalContent,
   textContentContactMe,
   mailText,
   githubAccount,
