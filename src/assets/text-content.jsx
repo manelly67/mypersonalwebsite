@@ -11,19 +11,17 @@ import { Project } from "./class-project";
 const myName = "Maria Nelly Lopez";
 
 const textContentAboutMe = (
-    <p><span>Hi!.</span>
-      I completed a full-stack development bootcamp and successfully built
-      several projects using Javascript, React, Sql, Prisma and Nodejs, which
-      demonstrates my commitment to transitioning into a web development role.
-      <br></br>
-      In my background I come with a solid formation and experience in the
-      accounting area.
-      <br></br>I bring strong organizational and problem-solving skills,
-      allowing me to effectively manage project timelines and resolve technical
-      issues.
-      <br></br>I am eager to leverage my analytical and accurate mindset from my
-      accounting background to excel in web development and continuous learning.
-    </p>
+  <p>
+    <span>Hi!. </span>
+    I am a CPA with over 25 years of experience and recently
+    completed a full-stack development bootcamp in which I successfully built
+    several projects using Javascript, React, Sql, Prisma and Nodejs.
+    <br></br>
+    <br></br>
+    My current focus is on combining my accounting skills with technology
+    solutions: developing financial applications, automating accounting tasks
+    and creating web tools for reporting, reconciliation and analysis.
+  </p>
 );
 
 const textContentContactMe =
@@ -113,11 +111,11 @@ const additional1 = {
   PR1_link: "https://github.com/TheOdinProject/curriculum/pull/29906",
   PR2_text: "Added note clarifying about the syntax in the lesson",
   PR2_link: "https://github.com/TheOdinProject/curriculum/pull/29895",
+  PR3_text: "Add section called PostgreSQL shell",
+  PR3_link: "https://github.com/TheOdinProject/curriculum/pull/30394",
 };
 
-const additionalContent = [
-  additional1, 
-];
+const additionalContent = [additional1];
 
 export {
   myName,

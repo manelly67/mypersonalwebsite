@@ -54,6 +54,24 @@ const Additional = (props) => {
                 />
               </a>
             </div>
+             <div className={pull_div}>
+              <p>PR:</p>
+              <p>{additionalContent[0]["PR3_text"]}</p>
+              <a
+                href={additionalContent[0]["PR3_link"]}
+                target="_blank"
+                rel="noopener noreferrer"
+                title="pull request merged"
+              >
+                <img
+                  src={githubPullImg.src}
+                  width="40px"
+                  height="40px"
+                  className={shadow}
+                  alt="github pull shark icon"
+                />
+              </a>
+            </div>
           </article>
         </>
       ) : null}
