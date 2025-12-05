@@ -6,6 +6,7 @@ class Project {
       this.screenshotProjectSource = '';
       this.githubHref = '';
       this.projectNewWindow = '';
+      this.details = '';
     }
   }
   
