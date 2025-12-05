@@ -19,21 +19,20 @@ article {
   align-self: center;
   align-content: center;
   margin: 0 auto;
-    
+
   border-radius: 6px 6px 6px 6px;
   box-shadow: var(--color-article-shadow) 2px 2px 4px 2px;
 }
 
- .projectImg {
-   display: grid;
-   margin: 0 auto;
-   padding-top: 1%;
-   border-left: var(--color-bg-second) solid 3px;
-   border-right: var(--color-bg-second) solid 3px;
- }
+.projectImg {
+  display: grid;
+  margin: 0 auto;
+  padding-top: 1%;
+  border-left: var(--color-bg-second) solid 3px;
+  border-right: var(--color-bg-second) solid 3px;
+}
 
 @media screen and (min-width: 981px) {
-
   .content {
     display: grid;
     grid-template-rows: repeat(auto-fit, minmax(350px, 1fr));
@@ -49,21 +48,18 @@ article {
   }
 
   .projectImg {
-    width: calc(var(--defining-width)*0.9);
+    width: calc(var(--defining-width) * 0.9);
     max-width: var(--defining-width);
     height: var(--defining-width);
     max-height: 230px;
-  } 
+  }
 
-
-  .divDescriptionArticle>p {
+  .divDescriptionArticle > p {
     padding-top: 3%;
   }
 }
 
-
 @media screen and (min-width: 620px) and (max-width: 980px) {
-
   .content {
     display: grid;
     grid-template-rows: repeat(auto-fit, minmax(210px, 1fr));
@@ -83,13 +79,10 @@ article {
     max-width: var(--defining-width);
     height: var(--defining-width);
     max-height: 210px;
-  } 
-
+  }
 }
 
-
 @media screen and (max-width: 619px) {
-
   .content {
     display: grid;
     grid-template-rows: repeat(auto-fit, minmax(210px, 1fr));
@@ -108,8 +101,7 @@ article {
     max-width: var(--defining-width);
     height: var(--defining-width);
     max-height: 210px;
-  } 
-
+  }
 }
 
 .divImgArticle {
@@ -127,20 +119,22 @@ article {
   background-color: var(--color-bg-second);
 }
 
-.divNameArticle>h3 {
+.divNameArticle > h3 {
   color: var(--color-base-text-article);
   font-size: 1.2rem;
   font-weight: 700;
   padding-left: 2%;
   padding-top: 3%;
+  padding-bottom: 2%;
 }
 
-.divNameArticle>div {
+.divNameArticle > div {
   display: flex;
   flex-direction: row;
   justify-content: right;
   gap: 10px;
   padding-top: 3.5%;
+  padding-right: 2%;
 }
 
 .divDescriptionArticle {
@@ -156,8 +150,7 @@ article {
   border-radius: 0px 0px 6px 6px;
 }
 
-.divDescriptionArticle>p {
-
+.divDescriptionArticle > p {
   color: var(--color-base-text-article);
   font-size: 1rem;
   padding: 4%;
@@ -165,14 +158,6 @@ article {
   flex-shrink: 1;
 }
 
-
-.divIcons {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  padding-bottom: 2%;
-}
-
-.shadow{
+.shadow {
   box-shadow: #e7e7e7 1px 1px 1px 1px;
 }
