@@ -3,12 +3,10 @@ import { mdiOpenInNew } from "@mdi/js";
 import { mdiDetails } from "@mdi/js";
 import { github } from "../assets/icons-source";
 import styles from "../styles/Projects.module.css";
-import buttons from "../styles/Buttons.module.css";
 import Additional from "./Additional";
 
 const Projects = (props) => {
-  const { setSelectedProj, setShowDetails, arrayProjects, additionalContent } =
-    props;
+  const { arrayProjects, additionalContent } = props;
   const githubImg = new Image();
   githubImg.src = github;
   const {
@@ -17,11 +15,8 @@ const Projects = (props) => {
     divNameArticle,
     divDescriptionArticle,
     projectImg,
-    divIcons,
     shadow,
   } = styles;
-
-  const { buttonE } = buttons;
 
   const listProjects = arrayProjects.map((e) => (
     <article key={e.id} id={e.id}>
@@ -36,7 +31,7 @@ const Projects = (props) => {
       </div>
       <div className={divNameArticle}>
         <h3 style={{ gridColumn: "1/2" }}>{e.projectName}</h3>
-        <div style={{ gridColumn: "2/3" }} className={divIcons}>
+        <div style={{ gridColumn: "2/3" }}>
           {!e.githubHref ? null : (
             <a
               href={e.githubHref}
@@ -65,14 +60,16 @@ const Projects = (props) => {
             </a>
           )}
 
-          <a
-            href={e.projectNewWindow}
-            target="_blank"
-            rel="noopener noreferrer"
-            title="page preview"
-          >
-            <Icon path={mdiOpenInNew} size={1.2} />
-          </a>
+          {!e.projectNewWindow ? null : (
+            <a
+              href={e.projectNewWindow}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="page preview"
+            >
+              <Icon path={mdiOpenInNew} size={1.2} />
+            </a>
+          )}
         </div>
       </div>
       <div className={divDescriptionArticle}>

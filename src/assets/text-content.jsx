@@ -6,6 +6,7 @@ import screenshot5 from "./img/screenshot-project5.jpg";
 import screenshot6 from "./img/screenshot-project6.jpg";
 import screenshot7 from "./img/screenshot-project7.jpg";
 import screenshot_S1 from "./img/screenshot-S1.jpg";
+import screenshot_S2 from "./img/screenshot-S2.jpg";
 
 import { Project } from "./class-project";
 
@@ -13,8 +14,7 @@ const myName = "Maria Nelly Lopez";
 
 const textContentAboutMe = (
   <p>
-    <span>Hi!. </span>
-    I am a CPA with over 25 years of experience and recently
+    <span>Hi!. </span>I am a CPA with over 25 years of experience and recently
     completed a full-stack development bootcamp in which I successfully built
     several projects using Javascript, React, Sql, Prisma and Nodejs.
     <br></br>
@@ -97,22 +97,24 @@ project7.projectNewWindow =
 
 const project_S1 = new Project("project_S1");
 project_S1.projectName = "Budget Expenditure Control";
-project_S1.projectDescription = "React for UI state management and D3.js for complex chart rendering and data-driven calculations";
+project_S1.projectDescription =
+  "React for UI state management and D3.js for complex chart rendering and data-driven calculations";
 project_S1.screenshotProjectSource = screenshot_S1;
-project_S1.details = "https://manelly67.github.io/ExpenditureControl-HowItWorks";
-project_S1.projectNewWindow =
-  "https://coffeetea.netlify.app";
+project_S1.details =
+  "https://manelly67.github.io/ExpenditureControl-HowItWorks";
+project_S1.projectNewWindow = "https://coffeetea.netlify.app";
 
 const project_S2 = new Project("project_S2");
-project_S2.projectName = "Websites for Independent Professionals";
-project_S2.projectDescription = "";
-project_S2.screenshotProjectSource = "";
-
-project_S2.projectNewWindow =
-  "https://coffeetea.netlify.app";
+project_S2.projectName = "Script for repetitive accounting tasks";
+project_S2.projectDescription =
+  "A well-designed Google Sheets + Google Apps Script system. The purpose of these scripts is to adapt them to the needs of each individual customer.";
+project_S2.screenshotProjectSource = screenshot_S2;
+project_S2.details =
+  "https://manelly67.github.io/script-for-accounting-how-it-works";
 
 const arrayProjects = [
   project_S1,
+  project_S2,
   project1,
   project2,
   project3,
