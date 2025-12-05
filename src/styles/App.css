@@ -197,6 +197,7 @@ header>div>h1 {
 .aboutMe>div,
 .aboutMeHalf>div {
   width: 80%;
+  max-width: 900px;
   margin: 0 auto;
   background-color: var(--color-bg-second);
   padding: 0.5em;
