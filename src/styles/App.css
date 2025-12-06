@@ -69,7 +69,7 @@ header>div>h1 {
 
 /* main and  aside for screens*/
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 461px) {
   main {
     display: grid;
     grid-template-rows: 100px 1fr;
@@ -104,11 +104,11 @@ header>div>h1 {
   }
 
   header>div>h1 {
-    font-size: 2em;
+    font-size: 1.6em;
   }
 }
 
-@media screen and (min-width: 431px) {
+@media screen and (min-width: 461px) {
   main {
     width: 100vw;
     height: 100%;
@@ -147,7 +147,7 @@ header>div>h1 {
 
 /* stretched for screens */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 401px) {
 
   .strechted {
     width: 100%;
@@ -156,7 +156,7 @@ header>div>h1 {
 
 }
 
-@media screen and (min-width:401px) and (max-width:980px) {
+@media screen and (min-width:401px) and (max-width:981px) {
 
   .strechted {
     width: 70%;
