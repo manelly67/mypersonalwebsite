@@ -77,7 +77,7 @@ const ContactMe = (props) => {
               </a>
               <p>{githubAccount}</p>
             </div>
-            <div className="infoRow">
+           {/*  <div className="infoRow">
               <a 
               href={file} 
               target="_blank"
@@ -88,7 +88,7 @@ const ContactMe = (props) => {
                 <Icon path={mdiFileDownload} size={1.1} />
               </a>
               <p>Download CV</p>
-            </div>
+            </div> */}
           </div>
 
           <img

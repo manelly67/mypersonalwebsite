@@ -1,10 +1,10 @@
 import screenshot1 from "./img/screenshot-project1.jpg";
 import screenshot2 from "./img/screenshot-project2.jpg";
-import screenshot3 from "./img/screenshot-project3.jpg";
+/* import screenshot3 from "./img/screenshot-project3.jpg"; */
 import screenshot4 from "./img/screenshot-project4.jpg";
 import screenshot5 from "./img/screenshot-project5.jpg";
 import screenshot6 from "./img/screenshot-project6.jpg";
-import screenshot7 from "./img/screenshot-project7.jpg";
+/* import screenshot7 from "./img/screenshot-project7.jpg"; */
 import screenshot_S1 from "./img/screenshot-S1.jpg";
 import screenshot_S2 from "./img/screenshot-S2.jpg";
 
@@ -26,7 +26,7 @@ const textContentAboutMe = (
 );
 
 const textContentContactMe =
-  "If you think that my work fits what you need and that I can contribute to your work team, write to me.";
+  "If you think that my work fits what you need, write to me.";
 
 const mailText = "manellylopez@yahoo.com";
 
@@ -51,14 +51,14 @@ project2.githubHref =
   "https://github.com/manelly67/TheOdinProject-WhereIsWaldo-Backend";
 project2.projectNewWindow = "https://whereisthegame.netlify.app";
 
-const project3 = new Project("project3");
+/* const project3 = new Project("project3");
 project3.projectName = "An Inventory App";
 project3.projectDescription =
   "NodeJs Express EJS Postgres. Relationships and constraints.";
 project3.screenshotProjectSource = screenshot3;
 project3.githubHref =
   "https://github.com/manelly67/TheOdinProject-Inventory-App";
-project3.projectNewWindow = "https://theodinproject-origami-store.onrender.com";
+project3.projectNewWindow = "https://theodinproject-origami-store.onrender.com"; */
 
 const project4 = new Project("project4");
 project4.projectName = "Against Computer Game - Battleship";
@@ -87,13 +87,13 @@ project6.githubHref =
   "https://github.com/manelly67/TheOdinProject-memory-card-game";
 project6.projectNewWindow = "https://memory-game-manelly67.netlify.app";
 
-const project7 = new Project("project7");
+/* const project7 = new Project("project7");
 project7.projectName = "Weather App";
 project7.projectDescription = "Javascript Data Fetching.";
 project7.screenshotProjectSource = screenshot7;
 project7.githubHref = "https://github.com/manelly67/TheOdinProject-WeatherApp";
 project7.projectNewWindow =
-  "https://manelly67.github.io/TheOdinProject-WeatherApp";
+  "https://manelly67.github.io/TheOdinProject-WeatherApp"; */
 
 const project_S1 = new Project("project_S1");
 project_S1.projectName = "Budget Expenditure Control";
@@ -117,11 +117,9 @@ const arrayProjects = [
   project_S2,
   project1,
   project2,
-  project3,
   project4,
   project5,
   project6,
-  project7,
 ];
 
 const additional1 = {
