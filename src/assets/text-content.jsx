@@ -6,6 +6,7 @@ import screenshot5 from "./img/screenshot-project5.jpg";
 import screenshot6 from "./img/screenshot-project6.jpg";
 import screenshot7 from "./img/screenshot-project7.jpg";
 import screenshot_S1 from "./img/screenshot-S1.jpg";
+import screenshot_S2 from "./img/screenshot-S2.jpg";
 
 import { Project } from "./class-project";
 
@@ -100,14 +101,22 @@ project_S1.projectName = "Budget Expenditure Control";
 project_S1.projectDescription =
   "React for UI state management and D3.js for complex chart rendering and data-driven calculations";
 project_S1.screenshotProjectSource = screenshot_S1;
-project_S1.details =
-  "https://manelly67.github.io/ExpenditureControl-HowItWorks";
+project_S1.githubHref = "https://github.com/manelly67/expense-control";
 project_S1.projectNewWindow = "https://coffeetea.netlify.app";
+
+const project_S2 = new Project("project_S2");
+project_S2.projectName = "Audio and writing exercises for practicing Spanish and Portuguese languages";
+project_S2.projectDescription =
+  "Designed using Angular, components for modular UI structure and services for shared logic.";
+project_S2.screenshotProjectSource = screenshot_S2;
+project_S2.githubHref = "https://github.com/manelly67/dictado-espresso-2025";
+project_S2.projectNewWindow = "https://dictadoespresso.netlify.app";
 
 const arrayProjects = [
   project_S1,
   project7,
   project3,
+  project_S2,
   project1,
   project2,
   project4,
